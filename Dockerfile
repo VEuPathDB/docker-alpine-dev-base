@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM foxcapades/alpine-oracle:1.3
 
 LABEL name=alpine-dev-base \
       version=1.0 \
