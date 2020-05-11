@@ -7,7 +7,7 @@ LABEL name=alpine-dev-base \
 ENV JAVA_HOME=/opt/jdk \
     PATH=/mvn/bin:/opt/jdk/bin:$PATH
 
-RUN apk add --no-cache wget
+RUN apk add --no-cache wget \
     && wget https://download.java.net/java/early_access/alpine/10/binaries/openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
     && tar -xzf openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
     && rm openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
