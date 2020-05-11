@@ -36,7 +36,7 @@ node ('centos8') {
         sh 'podman build --format=docker -t alpine-dev-base .'
 
         // push to dockerhub (for now)
-        sh "podman push --creds \"$HUB_LOGIN\" popbio-map docker://docker.io/veupathdb/alpine-dev-base:${tag}"
+        sh "podman push --creds \"$HUB_LOGIN\" alpine-dev-base docker://docker.io/veupathdb/alpine-dev-base:${tag}"
       }
 
     }
