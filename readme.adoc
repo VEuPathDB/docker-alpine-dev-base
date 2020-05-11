@@ -1,0 +1,7 @@
+= Alpine Dev Base
+
+Alpine linux container with Oracle Instant Client, OpenJDK,
+and Maven installed.
+
+Intended to be used as a build container for java based
+services.
