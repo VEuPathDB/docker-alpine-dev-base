@@ -8,10 +8,10 @@ ENV JAVA_HOME=/opt/jdk \
     PATH=/mvn/bin:/opt/jdk/bin:$PATH
 
 RUN apk add --no-cache wget \
-    && wget https://download.java.net/java/early_access/alpine/10/binaries/openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
-    && tar -xzf openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
-    && rm openjdk-15-ea+10_linux-x64-musl_bin.tar.gz \
-    && mv jdk-15 /opt/jdk \
+    && wget https://download.java.net/java/early_access/alpine/14/binaries/openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
+    && tar -xzf openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
+    && rm openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
+    && mv jdk-16 /opt/jdk \
     && wget https://mirrors.gigenet.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz \
     && tar -xzf apache-maven-3.6.3-bin.tar.gz \
     && rm apache-maven-3.6.3-bin.tar.gz \
