@@ -5,7 +5,7 @@ LABEL name=alpine-dev-base \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
 
 ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
-    PATH=$JAVA_HOME/bin:$PATH
+    PATH=/usr/lib/jvm/default-jvm/bin:$PATH
 
 RUN cat /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories; \
