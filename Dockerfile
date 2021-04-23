@@ -11,4 +11,4 @@ RUN cat /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories; \
-    apk add --no-cache wget curl bash openjdk15 maven
+    apk add --no-cache wget curl bash openjdk15 maven tzdata && cp /usr/share/zoneinfo/US/Eastern /etc/localtime
