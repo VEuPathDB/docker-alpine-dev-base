@@ -5,3 +5,26 @@ and Maven installed.
 
 Intended to be used as a build container for java based
 services.
+
+== Usage
+
+=== JDK 14
+
+[source, Dockerfile]
+----
+FROM veupathdb/alpine-dev-base
+----
+
+=== JDK 15
+
+[source, Dockerfile]
+----
+FROM veupathdb/alpine-dev-base:jdk-15
+----
+
+=== JDK 16
+
+[source, Dockerfile]
+----
+FROM veupathdb/alpine-dev-base:jdk-16
+----
