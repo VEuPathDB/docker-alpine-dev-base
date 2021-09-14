@@ -28,3 +28,10 @@ FROM veupathdb/alpine-dev-base:jdk-15
 ----
 FROM veupathdb/alpine-dev-base:jdk-16
 ----
+
+=== JDK 17
+
+[source, Dockerfile]
+----
+FROM veupathdb/alpine-dev-base:jdk-17
+----
