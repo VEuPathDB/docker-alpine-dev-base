@@ -1,7 +1,7 @@
-FROM foxcapades/alpine-oracle:1.3
+FROM foxcapades/alpine-oracle:1.5
 
 LABEL name=alpine-dev-base \
-      version=1.0 \
+      version=1.1 \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
 
 ENV JAVA_HOME=/opt/jdk \
