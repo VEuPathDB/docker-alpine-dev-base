@@ -8,10 +8,10 @@ ENV JAVA_HOME=/opt/jdk \
     PATH=/mvn/bin:/opt/jdk/bin:$PATH
 
 RUN apk add --no-cache wget \
-    && wget https://download.java.net/java/early_access/alpine/14/binaries/openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
-    && tar -xzf openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
-    && rm openjdk-16-ea+14_linux-x64-musl_bin.tar.gz \
-    && mv jdk-16 /opt/jdk \
+    && wget https://corretto.aws/downloads/latest/amazon-corretto-15-x64-alpine-jdk.tar.gz \
+    && tar -xzf amazon-corretto-15-x64-alpine-jdk.tar.gz \
+    && rm amazon-corretto-15-x64-alpine-jdk.tar.gz \
+    && mv amazon-corretto-15.0.2.7.1-alpine-linux-x64 /opt/jdk \
     && wget https://mirrors.gigenet.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz \
     && tar -xzf apache-maven-3.6.3-bin.tar.gz \
     && rm apache-maven-3.6.3-bin.tar.gz \
