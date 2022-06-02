@@ -21,7 +21,7 @@ RUN echo; \
     echo "*  Installing APK dependencies"; \
     echo "*"; \
     echo "********************************************************************************"; \
-    apk --no-cache add wget unzip libaio libnsl libc6-compat curl tzdata bash; \
+    apk --no-cache add wget unzip libaio libnsl libc6-compat curl tzdata bash maven; \
     \
     echo; \
     echo "********************************************************************************"; \
@@ -43,20 +43,4 @@ RUN echo; \
         && rm instantclient-basiclite-linux.x64-21.1.0.0.0.zip \
         && ln -s /usr/lib/libnsl.so.2 /usr/lib/libnsl.so.1 \
         && ln -s /lib/libc.so.6 /usr/lib/libresolv.so.2 \
-        && ln -s /lib64/ld-linux-x86-64.so.2 /usr/lib/ld-linux-x86-64.so.2 \
-    \
-    echo; \
-    echo "********************************************************************************"; \
-    echo "*"; \
-    echo "*  Installing Maven"; \
-    echo "*"; \
-    echo "********************************************************************************"; \
-    mkdir /usr/lib/maven; \
-    cd /usr/lib/maven; \
-    wget -q https://dlcdn.apache.org/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.tar.gz \
-        && tar -xf apache-maven-3.8.2-bin.tar.gz \
-        && rm apache-maven-3.8.2-bin.tar.gz \
-    && cd /usr/bin; \
-    echo "#!/bin/sh" > mvn; \
-    echo "/usr/lib/maven/apache-maven-3.8.2/bin/mvn" >> mvn; \
-    chmod +x /usr/bin/mvn
+        && ln -s /lib64/ld-linux-x86-64.so.2 /usr/lib/ld-linux-x86-64.so.2
