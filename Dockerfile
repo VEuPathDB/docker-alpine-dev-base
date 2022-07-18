@@ -7,17 +7,6 @@ LABEL name=alpine-dev-base \
 RUN echo; \
     echo "********************************************************************************"; \
     echo "*"; \
-    echo "*  Setting up edge APK repositories"; \
-    echo "*"; \
-    echo "********************************************************************************"; \
-    cat /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories; \
-    \
-    echo; \
-    echo "********************************************************************************"; \
-    echo "*"; \
     echo "*  Installing APK dependencies"; \
     echo "*"; \
     echo "********************************************************************************"; \
