@@ -35,6 +35,9 @@ node ('centos8') {
         // build the image
         sh 'podman build --format=docker -t alpine-dev-base .'
 
+        // tag the image
+        sh "podman tag alpine-dev-base:${tag}"
+
         // push to dockerhub (for now)
         sh "podman push --creds \"$HUB_LOGIN\" alpine-dev-base docker://docker.io/veupathdb/alpine-dev-base:${tag}"
       }
