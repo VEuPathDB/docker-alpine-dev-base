@@ -3,7 +3,7 @@ FROM amazoncorretto:18-alpine3.15
 LABEL name=alpine-dev-base \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
 
-ARG GRADLE_VERSION=7.5.1
+ARG GRADLE_VERSION=7.6
 
 ENV GRADLE_HOME=/opt/gradle-${GRADLE_VERSION} \
     PATH=$PATH:/opt/gradle-${GRADLE_VERSION}/bin
