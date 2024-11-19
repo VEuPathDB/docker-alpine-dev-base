@@ -1,9 +1,9 @@
-FROM amazoncorretto:22-alpine-jdk
+FROM amazoncorretto:23-alpine3.20-jdk
 
 LABEL name=alpine-dev-base \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
 
-ARG GRADLE_VERSION=8.7
+ARG GRADLE_VERSION=8.11
 
 ENV GRADLE_HOME=/opt/gradle-${GRADLE_VERSION} \
     PATH=$PATH:/opt/gradle-${GRADLE_VERSION}/bin
