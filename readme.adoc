@@ -1,37 +1,66 @@
 = Alpine Dev Base
 
+link:https://hub.docker.com/r/veupathdb/alpine-dev-base[On Dockerhub]
+
 Alpine linux container with Oracle Instant Client, OpenJDK,
 and Maven installed.
 
 Intended to be used as a build container for java based
 services.
 
-== Usage
+== Images
 
-=== JDK 14
+[%header]
+|===
+| Image | JDK Version | Extras
 
-[source, Dockerfile]
-----
-FROM veupathdb/alpine-dev-base
-----
+m| veupathdb/alpine-dev-base:jdk23-gradle8.11
+| Corretto 23
+| Gradle 8.11
 
-=== JDK 15
+m| veupathdb/alpine-dev-base:jdk-22-gradle-8.7
+| Corretto 22
+| Gradle 8.7
 
-[source, Dockerfile]
-----
-FROM veupathdb/alpine-dev-base:jdk-15
-----
+m| veupathdb/alpine-dev-base:jdk-21-gradle-8.7
+| Corretto 21
+| Gradle 8.7
 
-=== JDK 16
+m| veupathdb/alpine-dev-base:jdk-21-gradle-8.4
+| Corretto 21
+| Gradle 8.4
 
-[source, Dockerfile]
-----
-FROM veupathdb/alpine-dev-base:jdk-16
-----
+m| veupathdb/alpine-dev-base:jdk-19-gradle-8.0
+| Corretto 19
+| Gradle 8.0
 
-=== JDK 17
+m| veupathdb/alpine-dev-base:jdk-18-gradle-7.5.1
+| Corretto 18
+| Gradle 7.5.1
 
-[source, Dockerfile]
-----
-FROM veupathdb/alpine-dev-base:jdk-17
-----
+m| veupathdb/alpine-dev-base:jdk-18
+| Corretto 18
+| Maven
+
+m| veupathdb/alpine-dev-base:jdk-17
+| OpenJDK 17
+| Maven +
+Oracle Instant Client
+
+m| veupathdb/alpine-dev-base:jdk-16
+| OpenJDK 16
+| Maven +
+Oracle Instant Client
+
+
+m| veupathdb/alpine-dev-base:jdk-15
+| Corretto 15
+| Maven +
+Oracle Instant Client
+
+m| veupathdb/alpine-dev-base
+| OpenJDK 15
+| Maven +
+Oracle Instant Client
+
+|===
