@@ -14,13 +14,29 @@ services.
 |===
 | Image | JDK Version | Extras
 
+m| veupathdb/alpine-dev-base:jdk23-gradle8.11
+| Corretto 23
+| Gradle 8.11
+
+m| veupathdb/alpine-dev-base:jdk-22-gradle-8.7
+| Corretto 22
+| Gradle 8.7
+
+m| veupathdb/alpine-dev-base:jdk-21-gradle-8.7
+| Corretto 21
+| Gradle 8.7
+
+m| veupathdb/alpine-dev-base:jdk-21-gradle-8.4
+| Corretto 21
+| Gradle 8.4
+
 m| veupathdb/alpine-dev-base:jdk-19-gradle-8.0
 | Corretto 19
-| Gradle
+| Gradle 8.0
 
 m| veupathdb/alpine-dev-base:jdk-18-gradle-7.5.1
 | Corretto 18
-| Gradle
+| Gradle 7.5.1
 
 m| veupathdb/alpine-dev-base:jdk-18
 | Corretto 18
