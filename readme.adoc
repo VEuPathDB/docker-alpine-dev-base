@@ -14,6 +14,10 @@ services.
 |===
 | Image | JDK Version | Extras
 
+m| veupathdb/alpine-dev-base:jdk24-gradle8.14
+| Corretto 24
+| Gradle 8.14
+
 m| veupathdb/alpine-dev-base:jdk23-gradle8.11
 | Corretto 23
 | Gradle 8.11
