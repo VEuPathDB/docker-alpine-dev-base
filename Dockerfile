@@ -1,14 +1,16 @@
-FROM foxcapades/alpine-oracle:1.4
+FROM amazoncorretto:25-alpine3.22-jdk
 
 LABEL name=alpine-dev-base \
-      version=1.1 \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
 
-ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
-    PATH=/usr/lib/jvm/default-jvm/bin:$PATH
+ARG GRADLE_VERSION=9.2.1
 
-RUN cat /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories; \
-    apk add --no-cache wget curl bash openjdk15 maven tzdata && cp /usr/share/zoneinfo/US/Eastern /etc/localtime
+ENV GRADLE_HOME=/opt/gradle-${GRADLE_VERSION} \
+    PATH=$PATH:/opt/gradle-${GRADLE_VERSION}/bin
+
+RUN apk --no-cache add wget unzip libaio libnsl libc6-compat curl bash \
+ && mkdir /opt/gradle \
+ && cd /opt \
+ && curl -L https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o gradle.zip \
+ && unzip gradle.zip \
+ && rm gradle.zip
