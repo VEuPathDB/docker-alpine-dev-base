@@ -1,4 +1,4 @@
-FROM amazoncorretto:18-alpine3.15
+FROM amazoncorretto:21-alpine3.23
 
 LABEL name=alpine-dev-base \
       homepage=https://github.com/VEuPathDB/docker-alpine-oracle-jdk
