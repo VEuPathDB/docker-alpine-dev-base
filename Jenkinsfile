@@ -8,6 +8,6 @@ node('podbuild') {
 
   builder.gitClone()
   builder.buildContainers([
-    [ name: 'alpine-dev-base' ]
+    [ name: 'alpine-dev-base', publishBranches: true ]
   ])
 }
