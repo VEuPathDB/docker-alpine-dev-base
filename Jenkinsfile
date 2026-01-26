@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('pipelib@publish-branches')
+@Library('pipelib')
 import org.veupathdb.lib.Builder
 
 node('podbuild') {
